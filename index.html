@@ -33,8 +33,39 @@ display results in a function -->
     <title>Document</title>
 </head>
 <body>
+    <section>
+        <div id="results"></div>
+        <form name="quizForm" id="quiz"></form>
+        <!-- <form name="quizForm" onsubmit="submitAnswers()"> -->
+            <h3>Who is the best javascript mentor?</h3>
+            <p><input type="radio" name="question1" value="a" id="qla">A. TJ</p>
+            <p><input type="radio" name="question1" value="b" id="qlb">B. Al Einstein</p>
+            <p><input type="radio" name="question1" value="c" id="qlc">C. Nik Tesla</p>
+            <p><input type="radio" name="question1" value="d" id="qld">D. John Connor</p>
+            
+            <h3>What is the most popular javascript library or framework?</h3>
+            <p><input type="radio" name="question2" value="a" id="q2a">A. Angular</p>
+            <p><input type="radio" name="question2" value="b" id="q2b">B.  Vue</p>
+            <p><input type="radio" name="question2" value="c" id="q2c">C.  React</p>
+            <p><input type="radio" name="question2" value="d" id="q2d">D.  Other</p>
 
-<div id="title">Question</div> 
+            <h3>What is the most popular front end programming language?</h3>
+            <p><input type="radio" name="question3" value="a" id="q3a">A. Html</p>
+            <p><input type="radio" name="question3" value="b" id="q3b">B.  JavaScript</p>
+            <p><input type="radio" name="question3" value="c" id="q3c">C.  CSS</p>
+            <p><input type="radio" name="question3" value="d" id="q3d">D.  Other</p>
+            
+            <!-- <h2 id="answer1"></h2>
+            <h2 id="answer1a"></h2> -->
+            <!-- <input type="button" value="check answers" id="check" onClick="answerCheck()" >     -->
+           <br><br>
+           <!-- <input type="submit" value="Submit Answers">    -->
+           <input type="button"value="Submit Answers" onclick="submitAnswers()" >  
+        </form>
+    </section>    
+
+
+<!-- <div id="title">Question</div> 
 <ul>
     <li class="alternative"></li>
     <li class="alternative"></li>
@@ -43,7 +74,7 @@ display results in a function -->
 
 </ul>
 
-<button id="btn">Click Me</button>
+<button id="btn">Click Me</button> -->
     <!-- <div id="quiz"></div>
 
     <button id="submit">Get Results</button>

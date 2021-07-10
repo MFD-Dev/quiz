@@ -8,51 +8,109 @@
 // -When the user submits the quiz, add a message underneath each question letting them know if they got it right/wrong (give them the correct answer).
 
 
-let question = {
-    title: '"Who is the best javascript mentor?',
-    alternatives: ['TJ', 'Al Einstein', 'Nik Tesla', 'John Connor'],
-    correctAnswer: 'TJ'
-};
+//Submit answers
+function submitAnswers() {
+    var total = 5;
+    var score = 0;
+    console.log('Hi')
+    // Get User Input
+    var q1 = document.getElementById("quiz").value;//grabs specific form name and input+value;
+    // var q2 = document.forms["quizForm"]["q2"].value;//grabs specific form name and input+value;
+    // var q3 = document.forms["quizForm"]["q3"].value;//grabs specific form name and input+value;
+    
+    //test
+    alert(q1);
 
-//3. wrap in a function
-function showQuestion(q) {         
-// 1. select dom element
-let titleDiv = document.getElementById('title')
-
-//2. modify it 
-titleDiv.textContent = q.title;
-
-// grab all class alternative**make sure to include the .
-let alts = document.querySelectorAll('.alternative')
-// console.log(alts)
-alts.forEach(function(element, index){
-    //modify to the alternative
-    element.textContent = q.alternatives[index];
-    //6. add click listener for options
-    element.addEventListener('click', function(){
-        // test to make sure click is working -- element.textContent = 'a';
-        // check correct answer -- create a if statement
-        if (q.correctAnswer == index) {
-            console.log('Correct!');
-        } else {
-            alert(q.correctAnswer);
-            console.log('Wrong!');
-        }
-        /////////////////////////////////
-        // need to convert indexOf to string for correct answer.
-        //////////////////////////////
-    });
-});
 }
+       
 
-showQuestion(question)
-// 4.
-let btn = document.getElementById('btn')
-//5.
-// add a listening event for click and create a function for ea time
-btn.addEventListener('click', function(){
-    console.log('Clicked!')
-});
+
+//     var ele1 = document.getElementsByName("question1");
+
+//     // var answer1 = document.getElementById('answer1');
+
+// for (i = 0; i < ele1.length; i++) {
+//     if (ele1.value === "tj") {
+//         document.getElementById("answer1").innerHTML = "That is correct."
+//     } else {
+//         document.getElementById("answer1a").innerHTML = "That is incorrect"
+//     }
+//};
+
+
+//     for (i = 0; i < ele1.length; i++) {
+//         if (document.getElementById("answerOne").value == "tj") {
+//             console.log("That's Correct!");
+//         } else
+//         answer1.innerHTML = "The correct answer is " + document.getElementById("answerOne").value;
+//         console.log("That's incorrect") 
+//     } 
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let question = {
+//     title: '"Who is the best javascript mentor?',
+//     alternatives: ['TJ', 'Al Einstein', 'Nik Tesla', 'John Connor'],
+//     correctAnswer: 'TJ'
+// };
+
+// //3. wrap in a function
+// function showQuestion(q) {         
+// // 1. select dom element
+// let titleDiv = document.getElementById('title')
+
+// //2. modify it 
+// titleDiv.textContent = q.title;
+
+// // grab all class alternative**make sure to include the .
+// let alts = document.querySelectorAll('.alternative')
+// // console.log(alts)
+// alts.forEach(function(element, index){
+//     //modify to the alternative
+//     element.textContent = q.alternatives[index];
+//     //6. add click listener for options
+//     element.addEventListener('click', function(){
+//         // test to make sure click is working -- element.textContent = 'a';
+//         // check correct answer -- create a if statement
+//         if (q.correctAnswer == index) {
+//             console.log('Correct!');
+//         } else {
+//             alert(q.correctAnswer);
+//             console.log('Wrong!');
+//         }
+//         /////////////////////////////////
+//         // need to convert indexOf to string for correct answer.
+//         //////////////////////////////
+//     });
+// });
+// }
+
+// showQuestion(question)
+// // 4.
+// let btn = document.getElementById('btn')
+// //5.
+// // add a listening event for click and create a function for ea time
+// btn.addEventListener('click', function(){
+//     console.log('Clicked!')
+// });
 ////////////////////////////
 // var score = 0;
 // var questions = [ 
