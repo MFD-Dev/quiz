@@ -7,21 +7,114 @@
 // -Each question should have four multiple-choice answers to choose from.
 // -When the user submits the quiz, add a message underneath each question letting them know if they got it right/wrong (give them the correct answer).
 
+const quizData = [ 
+    {
+    question: "Who is the best javascript mentor?",
+    a: "TJ",
+    b: "Al Einstein",
+    c: "Nik Tesla",
+    d: "John Connor",
+    correct: "a"
+},
+    {
+    question: "What is the most popular javascript library or framework?",
+    a: "Angular",
+    b: "Vue",
+    c: "React",
+    d: "Other",
+    correct: "c"  
+},
+    {
+    question: "What is the most popular front end programming language?",
+    a: "Html",
+    b: "JavaScript",
+    c: "CSS",
+    d: "Other",
+    correct: "b"
+}
+ ];
+ const questionEl = document.getElementById('question');
+ const a_text = document.getElementById('a_text');
+ const b_text = document.getElementById('b_text');
+ const c_text = document.getElementById('c_text');
+ const d_text = document.getElementById('d_text');
+
+//keep track of current question
+let currentQuiz = 0;
+// load quiz and call everytime with submit
+loadQuiz();
+
+function loadQuiz() {
+    const currentQuizData = quizData[currentQuiz];
+    console.log('Hi')
+
+    questionEl.innerText = currentQuizData.question;
+    //should load with first
+    a_text.innerText = currentQuizData.a;
+    b_text.innerText = currentQuizData.b;
+    c_text.innerText = currentQuizData.c;
+    d_text.innerText = currentQuizData.d;
+
+    //counter for current question
+    currentQuestion++
+};
+
+// loadQuiz();
+// fill in the data to the ul
+
+
+
+
+
+
+// var score = 0;
+
+// // for loop to iterate through questions to ask
+//  for (var i = 0; i < questions.length; i ++) {
+//      // initiate prompt ask question to user and get response.
+//      var response = window.prompt(questions[i].prompt);
+//      if(response == questions[i].answer) {
+//          alert("Your right!");
+//      } else {
+//          alert("Your wrong!")
+//      }
+//  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Submit answers
-function submitAnswers() {
-    var total = 5;
-    var score = 0;
-    console.log('Hi')
-    // Get User Input
-    var q1 = document.getElementById("quiz").value;//grabs specific form name and input+value;
-    // var q2 = document.forms["quizForm"]["q2"].value;//grabs specific form name and input+value;
-    // var q3 = document.forms["quizForm"]["q3"].value;//grabs specific form name and input+value;
+// function submitAnswers() {
+//     var total = 5;
+//     var score = 0;
+//     console.log('Hi')
+//     // Get User Input
+//     var q1 = document.getElementById("quiz").value;//grabs specific form name and input+value;
+//     // var q2 = document.forms["quizForm"]["q2"].value;//grabs specific form name and input+value;
+//     // var q3 = document.forms["quizForm"]["q3"].value;//grabs specific form name and input+value;
     
-    //test
-    alert(q1);
+//     //test
+//     alert(q1);
 
-}
+// }
        
 
 
