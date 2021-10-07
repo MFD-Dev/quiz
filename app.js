@@ -8,13 +8,13 @@
 // -When the user submits the quiz, add a message underneath each question letting them know if they got it right/wrong (give them the correct answer).
 
 //Declare the UI elements
-var ul = document.getElementById('ul')
-var nextButton = document.getElementById('btnNext')
-var quizbox = document.getElementById('questionBox');
-var opt1 = document.getElementById('opt1')
-var opt2 = document.getElementById('opt2')
-var opt3 = document.getElementById('opt3')
-var opt4 = document.getElementById('opt4')
+let ul = document.getElementById('ul')
+let nextButton = document.getElementById('btnNext')
+let quizbox = document.getElementById('questionBox');
+let opt1 = document.getElementById('opt1')
+let opt2 = document.getElementById('opt2')
+let opt3 = document.getElementById('opt3')
+let opt4 = document.getElementById('opt4')
 
 
 var app = {
@@ -58,7 +58,7 @@ var app = {
     },
     check: function(ele){
         var id = ele.id.split('');
-        if(id[id.length - 1]==this.questions[this.index].answer){
+        if(id[id.length - 1]===this.questions[this.index].answer){
             this.score++;
             ele.className = "correct";           
              alert('You are Right!')
